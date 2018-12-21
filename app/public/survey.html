@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>Friend Finder Survey</title>
+    </head>
+<style>
+    label {
+        padding: 3%;
+        text-align: center;
+        color: black;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h5 {
+        text-align: center;
+        padding-top: 4%;
+    }
+
+    .with-gap {
+        background-color: green;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    #name {
+        text-align: center;
+    }
+
+    #photo {
+        text-align: center;
+    }
+
+    #submitBtn {
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body style="background-color: green">
+            <h4><strong>Survey Questions</strong></h4>
+            <p>Answer the questions below with a 1-5 scale.  1 meaning you strongly disagree, and 5 meaning you strongly agree! Once you complete the survey, we will find the best match for you!</p>
+            <div class='card-panel left-align grey'>
+                <h5><strong>About You</strong></h5>
+                <br>
+                <input id="name" type="text" class="validate" required>
+                <label class='active' for="name">Name (required)</label>
+                <input id="photo" type="text" class="validate" required>
+                <label class='active' for="name">Link to Photo (required)</label>
+                <h5><strong>Question 1</strong></h5>
+                <p>I see myself as extroverted, enthusiastic.</p>
+                <p class="browser-default" id="question1">
+                    <label>
+                        <input class="with-gap" value="1" name="group1" type="radio" />
+                        <span>1</span>
+                    </label>
+                    <label>
+                        <input class="with-gap" value="2" name="group1" type="radio" />
+                        <span>2</span>
+                    </label>
+                    <label>
+                        <input class="with-gap" value="3" name="group1" type="radio" />
+                        <span>3</span>
+                    </label>
+                    <label>
+                        <input class="with-gap" value="4" name="group1" type="radio" />
+                        <span>4</span>
+                    </label>
+                    <label>
+                        <input class="with-gap" value="5" name="group1" type="radio" />
+                        <span>5</span>
+                    </label>
+                </p>
+                <h5><strong>Question 2</strong></h5>
+                <p>I talk more than most people.</p>
+                <p class="browser-default" id="question2">
+                        <label>
+                            <input class="with-gap" value="1" name="group2" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group2" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group2" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group2" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group2" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 3</strong></h5>
+                <p>I enjoy playing video games.</p>
+                <p class="browser-default" id="question3">
+                        <label>
+                            <input class="with-gap" value="1" name="group3" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group3" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group3" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group3" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group3" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 4</strong></h5>
+                <p>I feel more comfortable as a follower than a leader.</p>
+                <p class="browser-default" id="question4">
+                        <label>
+                            <input class="with-gap" value="1" name="group4" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group4" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group4" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group4" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group4" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 5</strong></h5>
+                <p>I don't like scary movies.</p>
+                <p class="browser-default" id="question5">
+                        <label>
+                            <input class="with-gap" value="1" name="group5" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group5" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group5" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group5" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group5" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 6</strong></h5>
+                <p>People probably think I'm stubborn.</p>
+                <p class="browser-default" id="question6">
+                        <label>
+                            <input class="with-gap" value="1" name="group6" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group6" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group6" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group6" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group6" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 7</strong></h5>
+                <p>I feel very comfortable in large groups of people.</p>
+                <p class="browser-default" id="question7">
+                        <label>
+                            <input class="with-gap" value="1" name="group7" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group7" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group7" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group7" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group7" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 8</strong></h5>
+                <p>My relationships with my friends are very important to me.</p>
+                <p class="browser-default" id="question8">
+                        <label>
+                            <input class="with-gap" value="1" name="group8" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group8" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group8" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group8" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group8" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 9</strong></h5>
+                <p>I like to watch action/adventure movies.</p>
+                <p class="browser-default" id="question9">
+                        <label>
+                            <input class="with-gap" value="1" name="group9" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group9" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group9" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group9" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group9" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <h5><strong>Question 10</strong></h5>
+                <p>I am very open to new foods and different cultures.</p>
+                <p class="browser-default" id="question10">
+                        <label>
+                            <input class="with-gap" value="1" name="group10" type="radio" />
+                            <span>1</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="2" name="group10" type="radio" />
+                            <span>2</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="3" name="group10" type="radio" />
+                            <span>3</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="4" name="group10" type="radio" />
+                            <span>4</span>
+                        </label>
+                        <label>
+                            <input class="with-gap" value="5" name="group10" type="radio" />
+                            <span>5</span>
+                        </label>
+                    </p>
+                <br>
+                <button style="align-content: center;" type="submit" data-target="modal1" class="waves-effect waves-light btn modal-trigger green lighten-1"
+                    id="submitBtn"><i class="medium material-icons">send</i></button>
+            </div>
+        <div class='col s4'>
+            <p style="text-align: center"><a href='/api/friends'>API Friends List</a> | <a href='https://github.com/Lamuel27/Friend-Finder'
+                    target='_blank'>GitHub Repo</a></p>
+        </div>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Meet Your New Friend!</h4>
+                <h5 id="nameMatch"></h5>
+                <img id="pictureMatch" src="" alt="No Image" width=250px>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+            </div>
+        </div>
+
+</body>
+
+</html>
