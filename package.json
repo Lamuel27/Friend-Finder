@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  },
   "scripts": {
     "start": "node server.js"
   },
@@ -15,10 +20,5 @@
   "bugs": {
     "url": "https://github.com/Lamuel27/Friend-Finder/issues"
   },
-  "homepage": "https://github.com/Lamuel27/Friend-Finder#readme",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/Lamuel27/Friend-Finder#readme"
 }
