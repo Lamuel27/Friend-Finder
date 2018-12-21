@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
 
     <head>
         <meta charset="UTF-8">
@@ -316,16 +314,74 @@
         </div>
 
         <div id="modal1" class="modal">
-            <div class="modal-content">
+            <div style = "background-color: grey;" class="modal-content">
                 <h4>Meet Your New Friend!</h4>
                 <h5 id="nameMatch"></h5>
-                <img id="pictureMatch" src="" alt="No Image" width=250px>
+                <img style= "margin-right: auto; margin-left: auto;" id="pictureMatch" src="" alt="No Image" width=250px>
             </div>
-            <div class="modal-footer">
+            <div style = "background-color: green" class="modal-footer">
                 <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
             </div>
         </div>
-
 </body>
-
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#submitBtn").on("click", function () {
+            
+            // function formValidate() {
+            //     var isValid = true;
+            //     $('.validate').each(function () {
+            //         if ($(this).val() === '') {
+            //             isValid = false;
+            //         }
+            //     });
+            //     $('.browser-default').each(function () {
+            //         if ($(this).val() === "") {
+            //             isValid = false;
+            //         }
+            //     });
+            //     return isValid;
+            // }
+            // if (formValidate() == true) {
+                var newData = {
+                    name: $('#name').val().trim(),
+                    profPic: $('#photo').val().trim(),
+                    scores: [
+                        $('#question1').val(),
+                        $('#question2').val(),
+                        $('#question3').val(),
+                        $('#question4').val(),
+                        $('#question5').val(),
+                        $('#question6').val(),
+                        $('#question7').val(),
+                        $('#question8').val(),
+                        $('#question9').val(),
+                        $('#question10').val(),
+                    ]
+                };
+                var currentURL = window.location.origin;
+                $.post(currentURL + "/api/friends", newData, function (data) {
+                    $("#nameMatch").text(data.name);
+                    $("#pictureMatch").attr("src", data.profPic);
+                });
+                $('#modal1').modal();
+                $('#name').val("");
+                $('#photo').val("");
+                $('#question1').val("");
+                $('#question2').val("");
+                $('#question3').val("");
+                $('#question4').val("");
+                $('#question5').val("");
+                $('#question6').val("");
+                $('#question7').val("");
+                $('#question8').val("");
+                $('#question9').val("");
+                $('#question10').val("");
+            // } else {
+            //     alert("Please fill out all of the required fields before continuing!")
+            // }
+        });
+    });
+</script>
