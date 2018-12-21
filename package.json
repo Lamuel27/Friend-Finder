@@ -2,7 +2,7 @@
   "name": "friend-finder",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/Lamuel27/Friend-Finder/issues"
   },
-  "homepage": "https://github.com/Lamuel27/Friend-Finder#readme"
+  "homepage": "https://github.com/Lamuel27/Friend-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
 }
