@@ -33,10 +33,6 @@
         padding-top: 4%;
     }
 
-    .with-gap {
-        background-color: green;
-    }
-
     h4 {
         text-align: center;
     }
@@ -53,6 +49,16 @@
         display: flex;
         justify-content: center;
     }
+
+ [type="radio"]:checked + span:after,
+ 
+ [type="radio"].with-gap:checked + span:before,
+  
+ [type="radio"].with-gap:checked + span:after {
+  
+   border: 2px solid #ef5350;
+  
+ }
 </style>
 
 <body style="background-color: green">
@@ -69,6 +75,7 @@
         <h5><strong>Question 1</strong></h5>
         <p>I see myself as extroverted, enthusiastic.</p>
         <p class="browser-default" id="question1" value="">
+            <!-- use radio buttons and create each question -->
             <label>
                 <input class="with-gap" value="1" name="group1" type="radio" />
                 <span>1</span>
@@ -328,7 +335,7 @@
 </body>
 
 </html>
-
+<!-- create a function to take in the values from clicking each radio button -->
 <script type="text/javascript">
     $(document).ready(function () {
         $(".with-gap").on("click", function () {
@@ -364,6 +371,7 @@
                 $("#question10").attr("value", $(this).attr("value"))
             }
         })
+        // put data into an object, push it to friends, and make the match
         $("#submitBtn").on("click", function () {
 
             // function formValidate() {
@@ -422,6 +430,7 @@
             // }
         });
         $("#done").on("click", function () {
+            // reload after clicking done in the modal
             window.location.reload();
         })
     });
