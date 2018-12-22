@@ -24,7 +24,7 @@ module.exports = function (app) {
 
             if (totalDifference < minDifference) {
                 bestMatch = i;
-                minDifference = totalDif;
+                minDifference = totalDifference;
             }
         }
 
