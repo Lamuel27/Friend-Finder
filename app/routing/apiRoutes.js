@@ -11,10 +11,10 @@ module.exports = function (app) {
         for (var i = 0; i < user.scores.length; i++) {
             user.scores[i] = parseInt(user.scores[i]);
         }
-
+// create variables for the best match and minimum difference
         var bestMatch = 0;
         var minDifference = 30;
-
+// create formula to find the best match
         for (var i = 0; i < list.length; i++) {
             var totalDifference = 0;
             for (var j = 0; j < list[i].scores.length; j++) {
