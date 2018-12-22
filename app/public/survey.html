@@ -68,10 +68,10 @@
     <div class='card-panel left-align grey'>
         <h5><strong>About You</strong></h5>
         <br>
-        <input style = "border-bottom: 1px solid #000;" id="name" type="text" class="validate" required>
-        <label class='active' for="name"><i class="material-icons prefix">account_circle</i>  Name (required)</label>
-        <input style = "border-bottom: 1px solid #000;" id="photo" type="text" class="validate" required>
-        <label class='active' for="name"><i class="material-icons prefix">collections</i>  Link to Photo (required)</label>
+        <input style="border-bottom: 1px solid #000;" id="name" type="text" class="validate" required>
+        <label class='active' for="name"><i class="material-icons prefix">account_circle</i> Name (required)</label>
+        <input style="border-bottom: 1px solid #000;" id="photo" type="text" class="validate" required>
+        <label class='active' for="name"><i class="material-icons prefix">collections</i> Link to Photo (required)</label>
         <h5><strong>Question 1</strong></h5>
         <p>I see myself as extroverted, enthusiastic.</p>
         <p class="browser-default" id="question1" value="">
@@ -329,7 +329,7 @@
             <img style="margin-right: auto; margin-left: auto;" id="pictureMatch" src="" alt="No Image" width=250px>
         </div>
         <div style="background-color: green" class="modal-footer">
-            <a href="#" id = "done" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+            <a href="#" id="done" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
         </div>
     </div>
 </body>
@@ -374,21 +374,6 @@
         // put data into an object, push it to friends, and make the match
         $("#submitBtn").on("click", function () {
 
-            // function formValidate() {
-            //     var isValid = true;
-            //     $('.validate').each(function () {
-            //         if ($(this).val() === '') {
-            //             isValid = false;
-            //         }
-            //     });
-            //     $('.browser-default').each(function () {
-            //         if ($(this).val() === "") {
-            //             isValid = false;
-            //         }
-            //     });
-            //     return isValid;
-            // }
-            // if (formValidate() == true) {
             var newData = {
                 name: $('#name').val().trim(),
                 profPic: $('#photo').val().trim(),
@@ -412,22 +397,7 @@
                 $("#pictureMatch").attr("src", data.profPic);
             });
             $('#modal1').modal();
-            // $('#name').val("");
-            // $('#photo').val("");
-            // $('#question1').attr("value", "");
-            // $('#question2').attr("value", "");
-            // $('#question3').attr("value", "");
-            // $('#question4').attr("value", "");
-            // $('#question5').attr("value", "");
-            // $('#question6').attr("value", "");
-            // $('#question7').attr("value", "");
-            // $('#question8').attr("value", "");
-            // $('#question9').attr("value", "");
-            // $('#question10').attr("value", "");
-            // console.log($("#question1").attr("value"))
-            // } else {
-            //     alert("Please fill out all of the required fields before continuing!")
-            // }
+            ////////////////////
         });
         $("#done").on("click", function () {
             // reload after clicking done in the modal

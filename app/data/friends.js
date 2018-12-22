@@ -14,7 +14,23 @@ var list = [
         "5",
         "4"
       ]
-    }
+    },
+    {
+        name: 'Tester McTestington',
+        profPic: 'https://imageserver.eveonline.com//Character/92999821_128.jpg',
+        scores: [
+          "4",
+          "3",
+          "4",
+          "2",
+          "5",
+          "5",
+          "3",
+          "3",
+          "5",
+          "1"
+        ]
+      }
   ]
   
   module.exports = list;
